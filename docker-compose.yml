@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  drive-checker:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - GOOGLE_DRIVE_API_KEY=${GOOGLE_DRIVE_API_KEY}
+    restart: unless-stopped
